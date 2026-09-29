@@ -1,7 +1,6 @@
 [build]
-  base = "resume-builder"
   command = "npm run build"
-  publish = "resume-builder/.next"
+  publish = ".next"
 
 [build.environment]
   NODE_VERSION = "22"
