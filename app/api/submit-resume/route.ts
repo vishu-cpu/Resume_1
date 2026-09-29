@@ -13,7 +13,7 @@ export async function POST(req: Request) {
     }
 
     const body = submissionSchema.parse(await req.json());
-    const pdf = await renderToBuffer(React.createElement(ResumePdf, { data: body.resume }));
+    const pdf = await renderToBuffer(<ResumePdf data={body.resume} />);
 
     const ownerEmail = process.env.NEXT_PUBLIC_OWNER_EMAIL || "indiaislove75@gmail.com";
     const from = process.env.RESEND_FROM_EMAIL || "ResumeCraft <onboarding@resend.dev>";
